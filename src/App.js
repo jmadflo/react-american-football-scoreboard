@@ -38,10 +38,16 @@ function App() {
           <button className="awayButtons__touchdown" onClick={() => setAwayScore(awayScore + 7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setAwayScore(awayScore + 3)}>Away Field Goal</button>
         </div>
-        <div>
+        <div className="newButtons">
           <button className="quarter_button" onClick={() => {
             currentQuarter < 4 ? setCurrentQuarter(currentQuarter + 1) : setCurrentQuarter(1)
-            }}>Change quarter
+            }}>Change Quarter
+          </button>
+          <button className="reset_button" onClick={() => {
+            setCurrentQuarter(1);
+            setHomeScore(0);
+            setAwayScore(0);
+            }}>Reset Values
           </button>
         </div>
       </section>
